@@ -6,10 +6,8 @@
     ./git.nix
     ./keymaps.nix
     ./markdown.nix
-    ./toggleterm.nix
     ./telescope.nix
+    ./toggleterm.nix
     ./visual.nix
   ];
 }
-
-
