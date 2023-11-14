@@ -3,6 +3,7 @@
   imports = [
     ./cmp.nix
     ./git.nix
+    ./keymaps.nix
     ./toggleterm.nix
     ./visual.nix
   ];
