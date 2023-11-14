@@ -8,11 +8,19 @@
       };
       "<leader><leader>" = {
         action = "git_files";
-        desc = "Find files in git";
+        desc = "Find files tracked by git";
       };
       "<leader>ss" = {
         action = "live_grep";
-	desc = "Search forstring in current directory";
+	desc = "Search for string in current directory";
+      };
+      "<leader>fr" = {
+        action = "buffers";
+	desc = "List recently opened files";
+      };
+      "<M-S-p>" = {
+        action = "commands";
+	desc = "Command Palette";
       };
     };
     extensions.fzf-native = { enable = true; };
