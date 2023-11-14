@@ -4,6 +4,7 @@
     ./cmp.nix
     ./git.nix
     ./keymaps.nix
+    ./markdown.nix
     ./toggleterm.nix
     ./visual.nix
   ];
