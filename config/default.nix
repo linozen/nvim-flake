@@ -6,6 +6,7 @@
     ./keymaps.nix
     ./markdown.nix
     ./toggleterm.nix
+    ./telescope.nix
     ./visual.nix
   ];
 }
