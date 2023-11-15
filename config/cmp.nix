@@ -3,13 +3,13 @@
     nvim-cmp = {
       enable = true;
       sources = [
-        {name = "path";}
+        {name = "buffer";}
+        {name = "conventionalcommits";}
+        {name = "git";}
+        {name = "luasnip";}
         {name = "nvim_lsp";}
         {name = "nvim_lua";}
-        {name = "luasnip";}
-        {name = "buffer";}
-        {name = "git";}
-        {name = "conventionalcommits";}
+        {name = "path";}
       ];
       mapping = {
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
