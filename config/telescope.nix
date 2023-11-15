@@ -1,4 +1,5 @@
 {
+  plugins.project-nvim.enable = true;
   plugins.telescope = {
     enable = true;
     keymaps = {
@@ -12,17 +13,25 @@
       };
       "<leader>ss" = {
         action = "live_grep";
-	desc = "Search for string in current directory";
+        desc = "Search for string in current directory";
+      };
+      "<leader>bi" = {
+        action = "buffers";
+        desc = "List open buffers";
       };
       "<leader>fr" = {
-        action = "buffers";
-	desc = "List recently opened files";
+        action = "oldfiles";
+        desc = "List recently openened files";
       };
       "<M-S-p>" = {
         action = "commands";
-	desc = "Command Palette";
+        desc = "Command Palette";
       };
     };
-    extensions.fzf-native = { enable = true; };
+    extensions = {
+      fzf-native = {enable = true;};
+      project-nvim = {enable = true;};
+      file_browser = {enable = true;};
+    };
   };
 }

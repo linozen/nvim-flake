@@ -7,6 +7,7 @@
       action = "<CMD>Neogit<CR>";
       options = {
         silent = true;
+        desc = "Open Neogit";
       };
     }
     {
@@ -33,14 +34,30 @@
       action = "<CMD>wqa<CR>";
       options = {
         silent = true;
-        desc = "Save and exit";
+        desc = "Save and exit all";
       };
     }
     {
       mode = "n";
       lua = true;
-      action = " function() require('conform').format() end";
+      action = "function() require('conform').format() end";
       key = "<leader>cf";
+    }
+    {
+      mode = "n";
+      lua = true;
+      action = "function() require('specs').show_specs() end";
+      key = "<leader>hh";
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope projects<CR>";
+      key = "<leader>pp";
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope file_browser<CR>";
+      key = "<leader>pp";
     }
   ];
 }
