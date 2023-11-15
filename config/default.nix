@@ -9,6 +9,7 @@
     ./markdown.nix
     ./telescope.nix
     ./toggleterm.nix
+    ./treesitter.nix
     ./visual.nix
   ];
 }
