@@ -3,13 +3,13 @@
     nvim-cmp = {
       enable = true;
       sources = [
-        { name = "path"; }
-        { name = "nvim_lsp"; }
-        { name = "luasnip"; }
-        { name = "crates"; }
-        { name = "buffer"; }
-        { name = "git"; }
-        { name = "conventionalcommits"; }
+        {name = "path";}
+        {name = "nvim_lsp";}
+        {name = "nvim_lua";}
+        {name = "luasnip";}
+        {name = "buffer";}
+        {name = "git";}
+        {name = "conventionalcommits";}
       ];
       mapping = {
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
@@ -19,11 +19,11 @@
         "<CR>" = "cmp.mapping.confirm({ select = true })";
         "<C-j>" = {
           action = "cmp.mapping.select_next_item()";
-          modes = [ "i" "s" ];
+          modes = ["i" "s"];
         };
         "<C-k>" = {
           action = "cmp.mapping.select_prev_item()";
-          modes = [ "i" "s" ];
+          modes = ["i" "s"];
         };
       };
       snippet.expand = "luasnip";
