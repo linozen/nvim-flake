@@ -1,6 +1,7 @@
 {self, ...}: {
   # Import all your configuration modules here
   imports = [
+    ./autopairs.nix
     ./cmp.nix
     ./format.nix
     ./git.nix
