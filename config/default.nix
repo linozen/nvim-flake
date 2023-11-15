@@ -5,6 +5,7 @@
     ./format.nix
     ./git.nix
     ./keymaps.nix
+    ./lsp.nix
     ./markdown.nix
     ./telescope.nix
     ./toggleterm.nix
