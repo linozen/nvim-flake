@@ -22,10 +22,19 @@
     {
       mode = "n";
       key = "<M-q>";
-      action = "<CMD>bd<CR>";
+      action = "<CMD>wq<CR>";
       options = {
         silent = true;
-        desc = "Exit buffer";
+        desc = "Exit and save";
+      };
+    }
+    {
+      mode = "n";
+      key = "<M-S-q>";
+      action = "<CMD>wq!<CR>";
+      options = {
+        silent = true;
+        desc = "Exit and save";
       };
     }
     {
