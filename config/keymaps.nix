@@ -12,6 +12,15 @@
     }
     {
       mode = "n";
+      key = "<leader>ft";
+      action = "<CMD>Neotree toggle<CR>";
+      options = {
+        silent = true;
+        desc = "Toggle Neotree ";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>fs";
       action = "<CMD>w<CR>";
       options = {
