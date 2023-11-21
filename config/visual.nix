@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   # Colorscheme
-  colorschemes.oxocarbon.enable = true;
+  colorschemes.tokyonight = {
+    enable = true;
+    style = "night";
+  };
   # Buffer line on top
   plugins.bufferline = {
     enable = true;
@@ -14,6 +17,10 @@
     enable = true;
     cursorline.enable = false;
     cursorword.enable = true;
+  };
+  # Enable neotree
+  plugins.neo-tree = {
+    enable = true;
   };
   # Highlight cursor
   extraPlugins = with pkgs.vimPlugins; [
