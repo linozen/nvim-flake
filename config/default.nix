@@ -7,7 +7,7 @@
     ./git.nix
     ./keymaps.nix
     ./lsp.nix
-    ./markdown.nix
+    # ./markdown.nix
     ./telescope.nix
     ./toggleterm.nix
     ./treesitter.nix

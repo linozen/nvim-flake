@@ -14,4 +14,7 @@
       "K" = "hover";
     };
   };
+  extraConfigLua = ''
+    require'lspconfig'.marksman.setup{}
+  '';
 }
