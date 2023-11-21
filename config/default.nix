@@ -11,6 +11,7 @@
     ./telescope.nix
     ./toggleterm.nix
     ./treesitter.nix
+    ./surround.nix
     ./visual.nix
   ];
 }
