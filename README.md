@@ -15,3 +15,47 @@ To test your configuration simply run the following command
 ```
 nix run .
 ```
+
+## Installation
+
+### For NixOS users
+
+If you are using NixOS and manage your system with `/etc/nixos/configuration.nix`, you can include this flake in your system configuration:
+
+```nix
+{
+  inputs.nixvim.url = "github:nix-community/nixvim";
+
+  # ... rest of your configuration ...
+
+  environment.systemPackages = with pkgs; [
+    # ... other packages ...
+    inputs.nixvim.defaultPackage.${system}
+  ];
+}
+```
+
+### For Nix profile users
+
+If you are using Nix profiles, you can install the flake to your user profile with the following command:
+
+```
+nix profile install github:nix-community/nixvim
+```
+
+### Integrating into your own flake
+
+To integrate this flake into your own flake, add it to your flake's inputs and then use it in your outputs as needed:
+
+```nix
+{
+  inputs = {
+    # ... other inputs ...
+    nixvim.url = "github:nix-community/nixvim";
+  };
+
+  outputs = { self, nixpkgs, nixvim, ... } @ inputs: {
+    # ... your outputs ...
+  };
+}
+```
