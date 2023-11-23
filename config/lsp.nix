@@ -5,8 +5,25 @@
       bashls.enable = true;
       nixd.enable = true;
       ruff-lsp.enable = true;
+      ltex = {
+        enable = true;
+        settings = {
+	  language = "en-GB";
+          dictionary = {
+            "en-GB" = [
+              "Exocortex"
+              ":/home/lino/Exocortex/private/dict/en-US"
+            ];
+            "de-DE" = [
+              "Exocortex"
+              ":/home/lino/Exocortex/private/dict/de-DE"
+            ];
+          };
+        };
+      };
     };
     keymaps.lspBuf = {
+      "ga" = "code_action";
       "gd" = "definition";
       "gD" = "references";
       "gt" = "type_definition";
