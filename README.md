@@ -1,4 +1,6 @@
-# Nixvim template
+# Lino's Neovim Configuration
+
+This repository contains my personal Neovim configuration based on NixVim. It is designed to be portable, immutable, and self-contained.
 
 This template gives you a good starting point for configuring nixvim standalone.
 
@@ -24,7 +26,7 @@ If you are using NixOS and manage your system with `/etc/nixos/configuration.nix
 
 ```nix
 {
-  inputs.nixvim.url = "github:nix-community/nixvim";
+  inputs.nixvim.url = "github:linozen/nvim-flake";
 
   # ... rest of your configuration ...
 
@@ -40,7 +42,7 @@ If you are using NixOS and manage your system with `/etc/nixos/configuration.nix
 If you are using Nix profiles, you can install the flake to your user profile with the following command:
 
 ```
-nix profile install github:nix-community/nixvim
+nix profile install github:linozen/nvim-flake
 ```
 
 ### Integrating into your own flake
@@ -51,7 +53,7 @@ To integrate this flake into your own flake, add it to your flake's inputs and t
 {
   inputs = {
     # ... other inputs ...
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "github:linozen/nvim-flake";
   };
 
   outputs = { self, nixpkgs, nixvim, ... } @ inputs: {
