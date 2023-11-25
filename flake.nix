@@ -22,7 +22,6 @@
       nvim = nixvim'.makeNixvimWithModule {
         inherit pkgs;
         module = config;
-        extraPlugins = [ pkgs.vimPlugins.ChatGPT-nvim ];
         # You can use `extraSpecialArgs` to pass additional arguments to your module files
         extraSpecialArgs = {
           inherit self;
