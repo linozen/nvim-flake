@@ -3,17 +3,15 @@
 This repository contains my personal Neovim configuration based on NixVim. It
 is designed to be portable, immutable, and self-contained.
 
-This template gives you a good starting point for configuring nixvim standalone.
-
 ## Configuring
 
-To start configuring, just add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
-[`config/default.nix`](./config/default.nix) file
+To start configuring, simply add or modify the Nix files in the `./config`
+directory. If you add a new configuration file, remember to add it to the
+[`config/default.nix`](./config/default.nix) file.
 
 ## Testing your new configuration
 
-To test your configuration simply run the following command
+To test your configuration, simply run the following command:
 
 ```
 nix run .
@@ -47,22 +45,4 @@ with the following command:
 
 ```
 nix profile install github:linozen/nvim-flake
-```
-
-### Integrating into your own flake
-
-To integrate this flake into your own flake, add it to your flake's inputs and
-then use it in your outputs as needed:
-
-```nix
-{
-  inputs = {
-    # ... other inputs ...
-    nixvim.url = "github:linozen/nvim-flake";
-  };
-
-  outputs = { self, nixpkgs, nixvim, ... } @ inputs: {
-    # ... your outputs ...
-  };
-}
 ```
