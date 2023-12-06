@@ -15,5 +15,6 @@
     ./treesitter.nix
     ./surround.nix
     ./visual.nix
+    ./which-key.nix
   ];
 }
