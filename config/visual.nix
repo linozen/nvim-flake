@@ -4,9 +4,17 @@
     enable = true;
     style = "night";
   };
-  # Buffer line on top
-  plugins.bufferline = {
+  # # Buffer line on top
+  # plugins.bufferline = {
+  #   enable = true;
+  # };
+  # Startup screen
+  plugins.startify = {
+    customHeader = "";
     enable = true;
+    bookmarks = [
+      "~/Exocortex/pages/index.mdx"
+    ];
   };
   # Status line on bottom
   plugins.lualine = {
@@ -21,6 +29,7 @@
   # Enable neotree
   plugins.neo-tree = {
     enable = true;
+    closeIfLastWindow = true;
   };
   # Highlight cursor
   extraPlugins = with pkgs.vimPlugins; [
