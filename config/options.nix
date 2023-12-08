@@ -23,8 +23,12 @@
     smartcase = true;
     wildmode = "list:longest";
 
+    # Dedicated sign column
+    signcolumn = "yes";
+
     # Don't use a swapfile
     swapfile = false;
+
     # Use built-in persistent undo
     undofile = true;
   };

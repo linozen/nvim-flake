@@ -1,4 +1,15 @@
 {
+  extraConfigLua = ''
+    local diagnostics_active = true
+    local toggle_diagnostics = function()
+      diagnostics_active = not diagnostics_active
+      if diagnostics_active then
+        vim.diagnostic.show()
+      else
+        vim.diagnostic.hide()
+      end
+    end
+  '';
   globals.mapleader = " ";
   keymaps = [
     {
@@ -10,13 +21,24 @@
         desc = "Open Neogit";
       };
     }
+    # Toggles
+    {
+      mode = "n";
+      key = "<leader>td";
+      action = "toggle_diagnostics";
+      lua = true;
+      options = {
+        silent = true;
+        desc = "Toggle Diganostics";
+      };
+    }
     {
       mode = "n";
       key = "<leader>ft";
       action = "<CMD>Neotree toggle<CR>";
       options = {
         silent = true;
-        desc = "Toggle Neotree ";
+        desc = "Toggle Neotree";
       };
     }
     {
