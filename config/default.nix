@@ -3,6 +3,7 @@
   imports = [
     ./autopairs.nix
     ./cmp.nix
+    ./comment.nix
     ./format.nix
     ./git.nix
     ./gpt.nix
