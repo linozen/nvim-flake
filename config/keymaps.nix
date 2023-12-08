@@ -51,7 +51,7 @@
       };
     }
     {
-      mode = "n";
+      mode = ["n" "i"];
       key = "<M-q>";
       action = "<CMD>wq<CR>";
       options = {
@@ -60,7 +60,7 @@
       };
     }
     {
-      mode = "n";
+      mode = ["n" "i"];
       key = "<M-S-q>";
       action = "<CMD>wq!<CR>";
       options = {
