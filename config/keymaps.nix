@@ -1,16 +1,7 @@
 {
-  extraConfigLua = ''
-    local diagnostics_active = true
-    local toggle_diagnostics = function()
-      diagnostics_active = not diagnostics_active
-      if diagnostics_active then
-        vim.diagnostic.show()
-      else
-        vim.diagnostic.hide()
-      end
-    end
-  '';
+  # Set space as global leader key
   globals.mapleader = " ";
+  # Define keymaps
   keymaps = [
     {
       mode = "n";
@@ -21,17 +12,117 @@
         desc = "Open Neogit";
       };
     }
-    # Toggles
+    # Telescope-related
     {
       mode = "n";
-      key = "<leader>td";
-      action = "toggle_diagnostics";
-      lua = true;
+      action = "<CMD>Telescope projects<CR>";
+      key = "<leader>pp";
       options = {
         silent = true;
-        desc = "Toggle Diganostics";
+        desc = "Browse projects";
       };
     }
+    {
+      mode = "n";
+      action = "<CMD>Telescope file_browser<CR>";
+      key = "<leader>.";
+      options = {
+        silent = true;
+        desc = "Browse files in current directory";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope find_files<CR>";
+      key = "<leader><leader>";
+      options = {
+        silent = true;
+        desc = "Browse files";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope git_files<CR>";
+      key = "<leader>fg";
+      options = {
+        silent = true;
+        desc = "Browse files tracked by git";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope oldfiles<CR>";
+      key = "<leader>fr";
+      options = {
+        silent = true;
+        desc = "Browse recent files";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope live_grep<CR>";
+      key = "<leader>sp";
+      options = {
+        silent = true;
+        desc = "Search for string in current working directory";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope grep_string<CR>";
+      key = "<leader>ss";
+      options = {
+        silent = true;
+        desc = "Search for the string under cursor";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope treesitter<CR>";
+      key = "<leader>st";
+      options = {
+        silent = true;
+        desc = "Treesitter";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope buffers<CR>";
+      key = "<leader>bb";
+      options = {
+        silent = true;
+        desc = "Browse buffers";
+      };
+    }
+    {
+      mode = "n";
+      action = "<CMD>Telescope commands<CR>";
+      key = "<C-p>";
+      options = {
+        silent = true;
+        desc = "Open command palette";
+      };
+    }
+    # Diagnostics
+    {
+      mode = "n";
+      key = "<leader>de";
+      action = ":lua vim.diagnostic.enable()";
+      options = {
+        silent = true;
+        desc = "Enable Diganostics";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>de";
+      action = ":lua vim.diagnostic.disable()";
+      options = {
+        silent = true;
+        desc = "Disable Diganostics";
+      };
+    }
+    # Toggles
     {
       mode = "n";
       key = "<leader>ft";
@@ -41,6 +132,7 @@
         desc = "Toggle Neotree";
       };
     }
+    # Save and exit
     {
       mode = "n";
       key = "<leader>fs";
@@ -56,32 +148,55 @@
       action = "<CMD>wq<CR>";
       options = {
         silent = true;
-        desc = "Exit and save";
-      };
-    }
-    {
-      mode = ["n" "i"];
-      key = "<M-S-q>";
-      action = "<CMD>wq!<CR>";
-      options = {
-        silent = true;
-        desc = "Exit and save";
+        desc = "Save and close window";
       };
     }
     {
       mode = "n";
       key = "<leader>qa";
-      action = "<CMD>wqa<CR>";
+      action = "<CMD>wqa!<CR>";
       options = {
         silent = true;
-        desc = "Save and exit all";
+        desc = "Save and exit all windows";
       };
     }
+    # Window management
+    {
+      mode = "n";
+      key = "<leader>wv";
+      action = "<CMD>:vsplit<CR>";
+      options = {
+        silent = true;
+        desc = "Split vertically";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ws";
+      action = "<CMD>:split<CR>";
+      options = {
+        silent = true;
+        desc = "Split horizontally";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>w";
+      action = "<C-w>";
+      options = {
+        desc = "Windows";
+      };
+    }
+    # Formatting
     {
       mode = "n";
       lua = true;
       action = "function() require('conform').format() end";
       key = "<leader>cf";
+      options = {
+        silent = true;
+        desc = "Apply formatter";
+      };
     }
     {
       mode = "n";
@@ -89,15 +204,24 @@
       action = "function() require('specs').show_specs() end";
       key = "<leader>hh";
     }
+    # ChatGPT
     {
       mode = "n";
-      action = "<CMD>Telescope projects<CR>";
-      key = "<leader>pp";
+      key = "<leader>ac";
+      action = "<CMD>ChatGPT<CR>";
+      options = {
+        silent = true;
+        desc = "ChatGPT";
+      };
     }
     {
       mode = "n";
-      action = "<CMD>Telescope file_browser<CR>";
-      key = "<leader>pp";
+      key = "<leader>aa";
+      action = "<CMD>ChatGPTActAs<CR>";
+      options = {
+        silent = true;
+        desc = "ChatGPT with system prompt";
+      };
     }
   ];
 }
