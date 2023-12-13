@@ -10,9 +10,9 @@
         # Use a sub-list to run only the first available formatter
         json = [["prettierd" "prettier"]];
         javascript = [["prettierd" "prettier"]];
-        javascriptreact = [["prettierd" "prettier"]];
-        typescript = [["prettierd" "prettier"]];
-        typescriptreact = [["prettierd" "prettier"]];
+        javascriptreact = ["prettier"];
+        typescript = ["prettier"];
+        typescriptreact = ["prettier"];
         html = [["prettierd" "prettier"]];
         css = [["prettierd" "prettier"]];
         markdown = [["prettierd" "prettier"]];
