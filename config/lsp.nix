@@ -5,10 +5,12 @@
       bashls.enable = true;
       nixd.enable = true;
       ruff-lsp.enable = true;
+      tsserver.enable = true;
+      tailwindcss.enable = true;
       ltex = {
         enable = true;
         settings = {
-	  language = "en-GB";
+          language = "en-GB";
           dictionary = {
             "en-GB" = [
               "Exocortex"

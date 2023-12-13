@@ -113,8 +113,8 @@
           highlight = "FloatBorder",
           style = "rounded",
           text = {
-     top_align = "center",
-     top = " Prompt ",
+            top_align = "center",
+            top = " Prompt ",
           },
         },
         win_options = {
@@ -128,7 +128,7 @@
         border = {
           style = "rounded",
           text = {
-     top = " Settings ",
+            top = " Settings ",
           },
         },
         win_options = {
