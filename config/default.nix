@@ -15,6 +15,7 @@
     ./toggleterm.nix
     ./treesitter.nix
     ./surround.nix
+    ./snippets.nix
     ./visual.nix
     ./which-key.nix
   ];
