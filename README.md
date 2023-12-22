@@ -33,7 +33,7 @@ configuration:
 
   environment.systemPackages = with pkgs; [
     # ... other packages ...
-    inputs.nixvim.defaultPackage.${system}
+    inputs.nixvim.packages.${system}.default
   ];
 }
 ```
