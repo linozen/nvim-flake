@@ -24,7 +24,7 @@
     }
     {
       mode = "n";
-      action = "<CMD>Telescope file_browser<CR>";
+      action = "<CMD>Telescope file_browser hidden=true<CR>";
       key = "<leader>.";
       options = {
         silent = true;
@@ -33,7 +33,7 @@
     }
     {
       mode = "n";
-      action = "<CMD>Telescope find_files<CR>";
+      action = "<CMD>Telescope find_files hidden=true<CR>";
       key = "<leader><leader>";
       options = {
         silent = true;
