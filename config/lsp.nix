@@ -36,4 +36,5 @@
   extraConfigLua = ''
     require'lspconfig'.marksman.setup{}
   '';
+  plugins.trouble.enable = true;
 }
