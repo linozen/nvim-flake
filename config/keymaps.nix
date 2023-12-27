@@ -223,5 +223,14 @@
         desc = "ChatGPT with system prompt";
       };
     }
+    {
+      mode = "v";
+      key = "<leader>ae";
+      action = "<CMD>ChatGPTEditWithInstructions<CR>";
+      options = {
+        silent = true;
+        desc = "Edit with ChatGPT";
+      };
+    }
   ];
 }
