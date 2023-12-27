@@ -232,5 +232,16 @@
         desc = "Edit with ChatGPT";
       };
     }
+    # Diagnostics / Trouble
+    {
+      mode = "n";
+      key = "<leader>e";
+      lua = true;
+      action = "function() vim.diagnostic.open_float(0, {scope='line'}) end";
+      options = {
+        silent = true;
+        desc = "Show error properly";
+      };
+    }
   ];
 }
