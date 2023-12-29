@@ -46,9 +46,11 @@
         };
       };
 
+      foo = nixpkgs.lib.mkIf true;
+
       packages = {
         # Lets you run `nix run .` to start nixvim
         default = nvim;
       };
-   });
+    });
 }

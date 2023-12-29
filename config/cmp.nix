@@ -1,14 +1,14 @@
-{
+{lib, ...}: {
   plugins = {
     nvim-cmp = {
       enable = true;
       sources = [
+        {name = "nvim_lsp";}
         {name = "buffer";}
         {name = "conventionalcommits";}
         {name = "emoji";}
         {name = "git";}
         {name = "luasnip";}
-        {name = "nvim_lsp";}
         {name = "nvim_lua";}
         {name = "path";}
       ];
@@ -48,5 +48,5 @@
     cmp-spell.enable = true;
     cmp-treesitter.enable = true;
     cmp_luasnip.enable = true;
-  };
+ };
 }
