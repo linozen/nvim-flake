@@ -4,6 +4,7 @@
       enable = true;
       nixGrammars = true;
       indent = true;
+      folding = true;
       languageRegister = {
         markdown = ["md" "mdx"];
       };
