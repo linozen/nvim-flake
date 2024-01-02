@@ -1,8 +1,4 @@
-{
-  self,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   extraPlugins = with pkgs.unstable.vimPlugins; [
     ChatGPT-nvim
   ];

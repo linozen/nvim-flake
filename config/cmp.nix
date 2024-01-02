@@ -48,5 +48,5 @@
     cmp-spell.enable = true;
     cmp-treesitter.enable = true;
     cmp_luasnip.enable = true;
- };
+  };
 }
