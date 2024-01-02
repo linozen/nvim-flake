@@ -5,6 +5,24 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>;";
+      action = "<CMD>:bprev<CR>";
+      options = {
+        silent = true;
+        desc = "Previous buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>:";
+      action = "<CMD>:bnext<CR>";
+      options = {
+        silent = true;
+        desc = "Next buffer";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>gg";
       action = "<CMD>Neogit<CR>";
       options = {
