@@ -1,4 +1,5 @@
 {
+  config.clipboard.providers.wl-copy.enable = true;
   config.options = {
     # Enable faster completion
     updatetime = 100;
