@@ -32,5 +32,17 @@
 
     # Use built-in persistent undo
     undofile = true;
+
+    # Folding
+    foldenable = true;
+    foldmethod = "expr";
+    foldexpr = "nvim_treesitter#foldexpr()";
+    fillchars = "eob: ,fold: ,foldopen:,foldsep: ,foldclose:";
+    foldlevel = 99;
+    foldcolumn = "1";
+    foldlevelstart = 99;
+  };
+  config.globals = {
+    vim_markdown_folding_disabled = 1;
   };
 }

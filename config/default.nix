@@ -4,6 +4,7 @@
     ./autopairs.nix
     ./cmp.nix
     ./comment.nix
+    ./folding.nix
     ./format.nix
     ./git.nix
     ./gpt.nix
