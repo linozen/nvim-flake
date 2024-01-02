@@ -4,6 +4,9 @@
       enable = true;
       nixGrammars = true;
       indent = true;
+      languageRegister = {
+        markdown = ["md" "mdx"];
+      };
     };
     treesitter-context.enable = true;
     rainbow-delimiters.enable = true;

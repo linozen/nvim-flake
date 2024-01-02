@@ -9,7 +9,7 @@
     relativenumber = true;
 
     # Integrate both Linux clipboards
-    clipboard = "unnamed,unnamedplus";
+    clipboard = "unnamedplus";
 
     # Adapt indentation
     autoindent = true;

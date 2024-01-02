@@ -10,7 +10,7 @@
     ./gpt.nix
     ./keymaps.nix
     ./lsp.nix
-    # ./markdown.nix
+    ./markdown.nix
     ./options.nix
     ./telescope.nix
     ./toggleterm.nix
