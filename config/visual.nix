@@ -31,11 +31,15 @@
     enable = true;
     closeIfLastWindow = true;
   };
-  # Highlight cursor
   extraPlugins = with pkgs.vimPlugins; [
+    # Highlight cursor
     specs-nvim
+    # Distraction-free writing
+    zen-mode-nvim
+    twilight-nvim
   ];
   extraConfigLua = ''
+    -- Specs config
     require('specs').setup{
         show_jumps  = true,
         min_jump = 10,
@@ -52,6 +56,23 @@
         ignore_buftypes = {
             nofile = true,
         },
+    }
+
+    -- Zen mode config
+    require('zen-mode').setup{
+      window = {
+        options = {
+          foldcolumn = "0"
+        }
+      },
+      on_open = function(win)
+        vim.diagnostic.disable()
+      end
+    }
+
+    -- Twilight config
+    require('twilight').setup{
+      treesitter = true
     }
   '';
 }
