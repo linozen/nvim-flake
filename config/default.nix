@@ -6,6 +6,7 @@
     ./comment.nix
     ./folding.nix
     ./format.nix
+    ./filetype.nix
     ./git.nix
     ./gpt.nix
     ./keymaps.nix
