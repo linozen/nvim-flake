@@ -7,6 +7,7 @@
       ruff-lsp.enable = true;
       tsserver.enable = true;
       tailwindcss.enable = true;
+      yamlls.enable = true;
       ltex = {
         enable = true;
         settings = {
