@@ -2,6 +2,7 @@
   # Import all your configuration modules here
   imports = [
     ./autopairs.nix
+    ./colorscheme.nix
     ./cmp.nix
     ./comment.nix
     ./folding.nix

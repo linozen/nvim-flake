@@ -6,10 +6,5 @@
         mdx = 'markdown'
       }
     })
-    vim.filetype.add({
-      extension = {
-        jrnl = 'markdown'
-      }
-    })
   '';
 }

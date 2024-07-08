@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  # Colorscheme
-  colorschemes.tokyonight = {
-    enable = true;
-    style = "night";
-  };
   # # Buffer line on top
   # plugins.bufferline = {
   #   enable = true;
@@ -13,7 +8,7 @@
     customHeader = "";
     enable = true;
     bookmarks = [
-      "~/Exocortex/pages/index.mdx"
+      "~/Documents/00-09 System/00 Index/00 Index.txt"
     ];
   };
   # Status line on bottom
