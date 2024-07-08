@@ -9,7 +9,6 @@
     ./format.nix
     ./filetype.nix
     ./git.nix
-    ./gpt.nix
     ./keymaps.nix
     ./lsp.nix
     ./markdown.nix
