@@ -1,11 +1,11 @@
 {
-  plugins.project-nvim.enable = true;
   plugins.telescope = {
     enable = true;
-    enabledExtensions = [
-      "fzf-native"
-      "project-nvim"
-      "file_browser"
-    ];
+    extensions.fzf-native.enable = true;
+    extensions.file-browser.enable = true;
+  };
+  plugins.project-nvim = {
+    enable = true;
+    enableTelescope = true;
   };
 }
