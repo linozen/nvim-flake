@@ -12,7 +12,9 @@
       ];
     };
   };
-  plugins.vim-css-color.enable = true;
+  plugins.nvim-colorizer = {
+    enable = true;
+  };
   # Status line on bottom
   plugins.lualine = {
     enable = true;
