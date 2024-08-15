@@ -3,7 +3,7 @@
     enable = true;
     servers = {
       bashls.enable = true;
-      nil_ls.enable = true;
+      nil-ls.enable = true;
       ruff-lsp.enable = true;
       tsserver.enable = true;
       tailwindcss.enable = true;

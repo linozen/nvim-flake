@@ -1,33 +1,29 @@
 {lib, ...}: {
   plugins = {
-    nvim-cmp = {
+    cmp = {
       enable = true;
-      sources = [
-        {name = "nvim_lsp";}
-        {name = "buffer";}
-        {name = "conventionalcommits";}
-        {name = "emoji";}
-        {name = "git";}
-        {name = "luasnip";}
-        {name = "nvim_lua";}
-        {name = "path";}
-      ];
-      mapping = {
-        "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-        "<C-f>" = "cmp.mapping.scroll_docs(4)";
-        "<C-Space>" = "cmp.mapping.complete()";
-        "<C-e>" = "cmp.mapping.abort()";
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
-        "<C-j>" = {
-          action = "cmp.mapping.select_next_item()";
-          modes = ["i" "s"];
+      settings = {
+        sources = [
+          {name = "nvim_lsp";}
+          {name = "buffer";}
+          {name = "conventionalcommits";}
+          {name = "emoji";}
+          {name = "git";}
+          {name = "luasnip";}
+          {name = "nvim_lua";}
+          {name = "path";}
+        ];
+        mapping = {
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<C-e>" = "cmp.mapping.close()";
+          "<C-j>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          "<C-k>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-f>" = "cmp.mapping.scroll_docs(4)";
         };
-        "<C-k>" = {
-          action = "cmp.mapping.select_prev_item()";
-          modes = ["i" "s"];
-        };
+        snippet.expand = "luasnip";
       };
-      snippet.expand = "luasnip";
     };
     cmp-buffer.enable = true;
     cmp-clippy.enable = true;

@@ -37,7 +37,7 @@
 
     '';
   };
-  extraPlugins = with pkgs.unstable.vimPlugins; [
+  extraPlugins = with pkgs.vimPlugins; [
     statuscol-nvim
   ];
   extraConfigLua = ''

@@ -2,7 +2,6 @@
   plugins = {
     neogit = {
       enable = true;
-      useMagitKeybindings = true;
     };
     gitsigns.enable = true;
     gitmessenger.enable = true;

@@ -5,12 +5,14 @@
   # };
   # Startup screen
   plugins.startify = {
-    customHeader = "";
     enable = true;
-    bookmarks = [
-      "~/Documents/00-09 System/00 Index/00 Index.txt"
-    ];
+    settings = {
+      bookmarks = [
+        "~/Documents/00-09 System/00 Index/00 Index.txt"
+      ];
+    };
   };
+  plugins.vim-css-color.enable = true;
   # Status line on bottom
   plugins.lualine = {
     enable = true;

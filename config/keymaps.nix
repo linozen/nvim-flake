@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   # Set space as global leader key
   globals.mapleader = " ";
   extraConfigLua = ''
@@ -239,8 +239,7 @@
     # Formatting
     {
       mode = "n";
-      lua = true;
-      action = "function() require('conform').format() end";
+      action.__raw = ''function() require('conform').format() end'';
       key = "<leader>cf";
       options = {
         silent = true;
@@ -249,44 +248,14 @@
     }
     {
       mode = "n";
-      lua = true;
-      action = "function() require('specs').show_specs() end";
+      action.__raw = ''function() require('specs').show_specs() end'';
       key = "<leader>hh";
-    }
-    # ChatGPT
-    {
-      mode = "n";
-      key = "<leader>ac";
-      action = "<CMD>ChatGPT<CR>";
-      options = {
-        silent = true;
-        desc = "ChatGPT";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>aa";
-      action = "<CMD>ChatGPTActAs<CR>";
-      options = {
-        silent = true;
-        desc = "ChatGPT with system prompt";
-      };
-    }
-    {
-      mode = "v";
-      key = "<leader>ae";
-      action = "<CMD>ChatGPTEditWithInstructions<CR>";
-      options = {
-        silent = true;
-        desc = "Edit with ChatGPT";
-      };
     }
     # Diagnostics / Trouble
     {
       mode = "n";
       key = "<leader>e";
-      lua = true;
-      action = "function() vim.diagnostic.open_float(0, {scope='line'}) end";
+      action.__raw = ''function() vim.diagnostic.open_float(0, {scope='line'}) end'';
       options = {
         silent = true;
         desc = "Show error properly";

@@ -14,7 +14,6 @@
     ./markdown.nix
     ./options.nix
     ./telescope.nix
-    ./toggleterm.nix
     ./treesitter.nix
     ./surround.nix
     ./snippets.nix
